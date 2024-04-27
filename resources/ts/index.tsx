@@ -7,7 +7,6 @@ const root = createRoot(container!)
 
 root.render(
     <React.StrictMode>
-        <div>test</div>
         <App />
     </React.StrictMode>
 )
