@@ -1,16 +1,19 @@
-import React, { useEffect } from 'react'
-import axios from 'axios'
+import React from 'react'
+import { BrowserRouter } from 'react-router-dom'
+import MemberRouter from './router/MemberRouter'
+import { createRoot } from 'react-dom/client'
 
 const App: React.FC = () => {
-    // useEffect(() => {
-    //     const fetchFromLaravel = async () => {
-    //         const res = await axios.get(`/api/hoge`)
-    //         // alert(res.data.hoge)
-    //     }
-    //     fetchFromLaravel()
-    // }, [])
-
-    return <div className="App"></div>
+    return (
+        <>
+            <BrowserRouter>
+                <MemberRouter />
+            </BrowserRouter>
+        </>
+    )
 }
 
-export default App
+if (document.getElementById('app')) {
+    const root = createRoot(document.getElementById('app')!)
+    root.render(<App />)
+}
