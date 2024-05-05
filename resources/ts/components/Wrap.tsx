@@ -5,7 +5,9 @@ import Header from './Header'
 const Wrap = () => {
     return (
         <div className="flex">
-            <MainSidebar />
+            <div>
+                <MainSidebar />
+            </div>
             <div>
                 <Header />
                 <main></main>
